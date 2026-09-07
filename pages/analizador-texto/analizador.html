@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Analizador de Texto</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="../../index.html">&larr; Volver</a>
+
+    <main class="contenedor">
+
+        <h1>Analizador de Texto</h1>
+
+        <p class="descripcion">
+            Escribe un texto y analiza sus características.
+        </p>
+
+        <textarea id="texto" placeholder="Escribe o pega tu texto aquí..."></textarea>
+
+        <div class="botones">
+
+            <button onclick="analizarTexto()">
+                Analizar texto
+            </button>
+
+            <button onclick="limpiarTexto()">
+                Limpiar
+            </button>
+
+        </div>
+
+        <section id="resultado">
+
+            <p class="mensaje-inicial">
+                Los resultados aparecerán aquí.
+            </p>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
