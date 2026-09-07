@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Práctica calificada de JavaScript Avanzado: generador de contraseñas, analizador de texto, gestor de gastos y sorteador de grupos." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/index.css" />
+  <title>Práctica 01 de JavaScript</title>
+</head>
+
+<body>
+  <main>
+    <!-- Portada -->
+    <section class="portada" id="portada">
+      <div class="contenedor portada-contenido">
+        <h1 class="portada-titulo">Cuatro herramientas, un solo espacio.</h1>
+        <p class="portada-subtitulo">Práctica calificada de JavaScript Avanzado, usando los conocimientos de las clases de la semana 01 a la semana 04.</p>
+        <a class="boton boton-primario" href="#herramientas">Explorar herramientas</a>
+      </div>
+    </section>
+
+    <!-- Herramientas -->
+    <section class="seccion" id="herramientas">
+      <div class="contenedor">
+        <header class="seccion-cabecera">
+          <h2>Módulos de la Práctica Calificada</h2>
+          <p>Escoge una herramienta para probarla</p>
+        </header>
+
+        <div class="grid-herramientas">
+          <article class="tarjeta">
+            <h3>Generador de contraseñas seguras</h3>
+            <p>Genera contraseñas aleatorias y verifica mediante expresiones regulares si cumplen los requisitos mínimos de seguridad.</p>
+            <a class="boton boton-tarjeta" href="pages/generador-contrasenas/index.html">Crear contraseña
+              <span class="flecha" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.4"
+                  aria-hidden="true" class="flecha" viewBox="0 0 24 24">
+                  <path
+                    d="M13.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06l4.72-4.72H4a.75.75 0 0 1 0-1.5h14.19l-4.72-4.72a.75.75 0 0 1 0-1.06Z"
+                    clip-rule="evenodd" />
+                </svg>
+              </span>
+            </a>
+          </article>
+
+          <article class="tarjeta">
+            <h3>Analizador de texto</h3>
+            <p>Analiza textos, transforma mayúsculas y minúsculas, elimina espacios, identifica palabras y muestra estadísticas.</p>
+            <a class="boton boton-tarjeta" href="pages/analizador-texto/index.html">Analizar texto
+              <span class="flecha" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true" class="flecha" viewBox="0 0 24 24"><path d="M13.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06l4.72-4.72H4a.75.75 0 0 1 0-1.5h14.19l-4.72-4.72a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"/></svg>
+              </span>
+            </a>
+          </article>
+
+          <article class="tarjeta">
+            <h3>Gestor de gastos</h3>
+            <p>Organiza gastos por categorías, calcula totales, identifica dónde se gastó más y permite filtrar gastos por límite.</p>
+            <a class="boton boton-tarjeta" href="pages/gestor-gastos/index.html">Gestionar gastos
+              <span class="flecha" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true" class="flecha" viewBox="0 0 24 24"><path d="M13.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06l4.72-4.72H4a.75.75 0 0 1 0-1.5h14.19l-4.72-4.72a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"/></svg>
+              </span>
+            </a>
+          </article>
+
+          <article class="tarjeta">
+            <h3>Sorteador de grupos</h3>
+            <p>Introduce una lista de nombres, selecciona la cantidad de grupos y distribuye aleatoriamente a los
+              participantes.</p>
+            <a class="boton boton-tarjeta" href="pages/sorteador-grupos/index.html">Crear grupos
+              <span class="flecha" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true" class="flecha" viewBox="0 0 24 24"><path d="M13.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06l4.72-4.72H4a.75.75 0 0 1 0-1.5h14.19l-4.72-4.72a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"/></svg>
+              </span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Equipo -->
+    <section class="seccion" id="equipo">
+      <div class="contenedor">
+        <header class="seccion-cabecera seccion-cabecera-centrada">
+          <h2>Integrantes</h2>
+          <p>Estudiantes responsables de la concepción y desarrollo de cada módulo.</p>
+        </header>
+
+        <div class="grid-equipo">
+          <article class="integrante">
+            <img class="integrante-avatar" src="./assets/img/integrante01.jpg" alt="Integrante 01"/>
+            <h3>Zamira Luana Mendoza Zacsa</h3>
+            <p>Generador de contraseñas y reglas criptográficas.</p>
+          </article>
+
+          <article class="integrante">
+            <img class="integrante-avatar" src="" alt="Integrante 02"/>
+            <h3>Ashley Guevara Guerrero</h3>
+            <p>Analizador de texto y patrones de procesamiento.</p>
+          </article>
+
+          <article class="integrante">
+            <img class="integrante-avatar" src="./assets/img/mateo-avatar.jpg" alt="Integrante 03"/>
+            <h3>Mateo Jimenez Chinchay</h3>
+            <p>Gestor de gastos y balance computacional.</p>
+          </article>
+
+          <article class="integrante">
+            <img class="integrante-avatar" src="" alt="Integrante 04"/>
+            <h3>Mauricio Barrutia Ojeda</h3>
+            <p>Sorteador de grupos y algoritmos estocásticos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
