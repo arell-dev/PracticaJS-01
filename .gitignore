@@ -3,6 +3,10 @@ node_modules/
 jspm_packages/
 bower_components/
 
+# Manifiestos generados por la instalación de prettier
+package-lock.json
+package.json
+
 # Archivos de log y temporales
 logs/
 *.log
