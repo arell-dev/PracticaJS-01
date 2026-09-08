@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Sorteador de grupos: introduce nombre de participantes y distribúyelos aleatoriamente en equipos." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Sorteador de Grupos</title>
+</head>
+
+<body>
+  <main class="contenedor">
+    <a class="volver" href="../../index.html"><span aria-hidden="true">&larr;</span>Volver</a>
+
+    <header class="encabezado">
+      <h1>Sorteador de Grupos</h1>
+      <p>Introduce una lista de nombres, selecciona la cantidad de grupos y distribuye aleatoriamente a los participantes.</p>
+    </header>
+
+    <div class="distribucion">
+      <!-- Configuración -->
+      <div class="columna-configuracion">
+        <section class="panel" aria-labelledby="titulo-configuracion">
+          <div class="panel-cabecera">
+            <h2 id="titulo-configuracion">Configuración del sorteo</h2>
+            <span class="distintivo" id="contador-detectados">0 detectados</span>
+          </div>
+
+          <div class="campo">
+            <div class="campo-fila">
+              <label for="lista-participantes">Lista de participantes</label>
+              <div class="acciones-texto">
+                <button id="btn-cargar-ejemplo" type="button">Cargar ejemplo</button>
+                <span class="separador" aria-hidden="true">-</span>
+                <button id="btn-limpiar" type="button">Limpiar</button>
+              </div>
+            </div>
+            <textarea id="lista-participantes" rows="9"
+              placeholder="Escribe un participante por línea o separados por comas..."></textarea>
+            <p class="ayuda">Acepta saltos de línea o comas. Se omiten líneas en blanco y espacios duplicados.</p>
+          </div>
+
+          <div class="campo">
+            <span class="etiqueta">¿Cómo distribuir?</span>
+            <div class="segmentado" role="group" aria-label="Modo de distribución">
+              <button class="segmento activo" id="modo-grupos" type="button">Por grupos</button>
+              <button class="segmento" id="modo-tamano" type="button">Por tamaño</button>
+            </div>
+          </div>
+
+          <div class="selector">
+            <div class="selector-texto">
+              <span class="selector-nombre" id="etiqueta-objetivo">Cantidad de grupos</span>
+              <span class="selector-descripcion" id="descripcion-objetivo">Total de equipos a formar</span>
+            </div>
+            <div class="stepper">
+              <button id="btn-disminuir" type="button" aria-label="Disminuir">−</button>
+              <span class="stepper-valor" id="valor-objetivo">3</span>
+              <button id="btn-aumentar" type="button" aria-label="Aumentar">+</button>
+            </div>
+          </div>
+
+          <div class="opciones">
+            <label class="opcion">
+              <input type="checkbox" id="opcion-equilibrado" checked />
+              <span>Repartir sobrantes de forma equilibrada</span>
+            </label>
+            <label class="opcion">
+              <input type="checkbox" id="opcion-coordinador" />
+              <span>Designar un coordinador por grupo</span>
+            </label>
+          </div>
+
+          <div class="acciones">
+            <button class="boton boton-primario" id="btn-sortear" type="button">Sortear grupo aleatoriamente</button>
+          </div>
+        </section>
+
+        <!-- Métricas del sorteo -->
+        <section class="metricas" aria-label="Métricas del sorteo">
+          <div class="metrica">
+            <span class="metrica-titulo">Total Personas</span>
+            <span class="metrica-valor" id="metrica-total">0</span>
+          </div>
+          <div class="metrica">
+            <span class="metrica-titulo">Promedio</span>
+            <span class="metrica-valor verde" id="metrica-promedio">0</span>
+          </div>
+          <div class="metrica">
+            <span class="metrica-titulo">Equipos</span>
+            <span class="metrica-valor violeta" id="metrica-equipos">0</span>
+          </div>
+        </section>
+      </div>
+
+      <!-- Resultados -->
+      <section class="columna-resultados" aria-labelledby="titulo-resultados">
+        <div class="panel panel-resultados">
+          <div class="panel-cabecera">
+            <h2 id="titulo-resultados">Grupos generados</h2>
+            <span class="distintivo" id="resumen-resultados">0 grupos - 0 integrantes</span>
+          </div>
+          <div class="grupos" id="contenedor-grupos"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
