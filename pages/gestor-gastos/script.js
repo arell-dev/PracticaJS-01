@@ -2,7 +2,6 @@ let gastos = [];
 
 // AGREGAR GASTO
 function agregarGasto() {
-
     let categoria = document.getElementById("categoria").value;
     let monto = Number(document.getElementById("monto").value);
 
@@ -31,13 +30,10 @@ function agregarGasto() {
 
 // MOSTRAR GASTOS
 function mostrarGastos() {
-
     let resultado = document.getElementById("resultado");
-
     resultado.innerHTML = "";
 
     for (let i = 0; i < gastos.length; i++) {
-
         resultado.innerHTML += `<p>Categoría: ${gastos [i].categoria} Monto: S/ ${gastos[i].monto}</p>`;
     }
 }
@@ -45,11 +41,9 @@ function mostrarGastos() {
 
 // TOTAL DE GASTOS
 function calcularTotal() {
-
     let total = 0;
 
     for (let i = 0; i < gastos.length; i++) {
-
         total = total + gastos[i].monto;
     }
 
@@ -60,16 +54,13 @@ function calcularTotal() {
 
 // TOTAL POR CATEGORIA
 function totalPorCategoria() {
-
     let categoria = document.getElementById("categoriaTotal").value;
     let total = 0;
 
     categoria = categoria.trim().toLowerCase();
 
     for (let i = 0; i < gastos.length; i++) {
-
         if (gastos[i].categoria.toLowerCase() === categoria) {
-
             total = total + gastos[i].monto;
         }
     }
@@ -78,12 +69,9 @@ function totalPorCategoria() {
         "Total en " + categoria + ": S/ " + total;
 }
 
-
 // CATEGORIA CON MAYOR GASTO
 function mayorGasto() {
-
     if (gastos.length === 0) {
-
         alert("No hay gastos registrados");
         return;
     }
@@ -92,21 +80,17 @@ function mayorGasto() {
     let totales = [];
 
     for (let i = 0; i < gastos.length; i++) {
-
         let categoria = gastos[i].categoria;
         let encontrada = false;
 
         for (let j = 0; j < categorias.length; j++) {
-
             if (categorias[j].toLowerCase() === categoria.toLowerCase()) {
-
                 totales[j] = totales[j] + gastos[i].monto;
                 encontrada = true;
             }
         }
 
         if (encontrada === false) {
-
             categorias.push(categoria);
             totales.push(gastos[i].monto);
         }
@@ -116,9 +100,7 @@ function mayorGasto() {
     let categoriaMayor = categorias[0];
 
     for (let i = 1; i < totales.length; i++) {
-
         if (totales[i] > mayor) {
-
             mayor = totales[i];
             categoriaMayor = categorias[i];
         }
@@ -131,16 +113,13 @@ function mayorGasto() {
 
 // FILTRAR GASTOS
 function filtrarGastos() {
-
     let montoFiltro = Number(document.getElementById("filtro").value);
     let resultado = document.getElementById("resultadoFiltro");
 
     resultado.innerHTML = "";
 
     for (let i = 0; i < gastos.length; i++) {
-
         if (gastos[i].monto > montoFiltro) {
-
             resultado.innerHTML +=
                 " Categoria: " + gastos[i].categoria + " \n Monto: Soles: " + gastos[i].monto;
         }

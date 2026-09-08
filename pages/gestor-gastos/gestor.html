@@ -1,28 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Gestor de Gastos</title>
 </head>
 
 <body>
-
-    <a href="../../index.html" style="text-decoration: none;">&larr; Volver</a>
+    <a href="../../index.html" style="text-decoration: none">&larr; Volver</a>
 
     <h1>Gestor de Gastos</h1>
 
     <h2>Agregar gasto</h2>
 
     <label>Categoría:</label>
-    <input type="text" id="categoria">
+    <input type="text" id="categoria" />
 
-    <br><br>
+    <br /><br />
 
     <label>Monto:</label>
-    <input type="text" id="monto">
+    <input type="text" id="monto" />
 
-    <br><br>
+    <br /><br />
 
     <button onclick="agregarGasto()">Agregar gasto</button>
 
@@ -39,7 +38,7 @@
     <h2>Total por categoría</h2>
 
     <label>Categoría:</label>
-    <input type="text" id="categoriaTotal">
+    <input type="text" id="categoriaTotal" />
 
     <button onclick="totalPorCategoria()">Calcular</button>
 
@@ -54,14 +53,13 @@
     <h2>Filtrar gastos</h2>
 
     <label>Gastos mayores a:</label>
-    <input type="text" id="filtro">
+    <input type="text" id="filtro" />
 
     <button onclick="filtrarGastos()">Filtrar</button>
 
     <p id="resultadoFiltro"></p>
 
     <script src="script.js"></script>
-
 </body>
 
 </html>
