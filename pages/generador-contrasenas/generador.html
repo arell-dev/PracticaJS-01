@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Contraseñas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="../../index.html">&larr; Volver</a>
+    <main class="contenedor">
+        <h1>Generador de Contraseñas</h1>
+        <p>Genera una contraseña aleatoria y comprueba si cumple los requisitos mínimos de seguridad.</p>
+
+        <input type="text" id="contrasena" placeholder="La contraseña aparecerá aquí">
+        <div class="botones">
+            <button onclick="generarContrasena()">Generar contraseña</button>
+            <button onclick="validarContrasena()">Validar contraseña</button>
+        </div>
+
+        <h2>Requisitos</h2>
+        <ul>
+            <li>Mínimo 8 caracteres</li>
+            <li>Una letra mayúscula</li>
+            <li>Una letra minúscula</li>
+            <li>Un número</li>
+        </ul>
+        <div id="resultado">
+            El resultado aparecerá aquí.
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
